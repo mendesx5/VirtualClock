@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    width: 100%;
+    transition: background .2s linear;
+}
+
+#s-clock {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#s-back video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+}
+
+header .grid-layout nav {
+    margin: 0;
+    padding: 5px 150px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    z-index: 999;
+}
+
+header .grid-layout nav .menu ul {
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+}
