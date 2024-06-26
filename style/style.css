@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -62,14 +65,15 @@ header .grid-layout nav .menu ul {
 }
 
 #s-back .clock button {
-    margin: 10px 0;
+    margin: 0 0;
     padding: 5px;
     font-size: 1.2rem;
     width: 120px;
     background: transparent;
     border: 2px #986dff solid;
-    color: #fff;
+    color: #111;
     transition: all .5s ease;
+    font-weight: 800;
 }
 
 #s-back .clock button:hover {
@@ -82,4 +86,67 @@ header .grid-layout nav .menu ul {
 
 #s-back .clock #btn-dig {
     border-radius: 0 20px 20px 0;
+}
+
+#s-back .clock .pointer-clock {
+    border: 2px #986dff solid;
+    margin: 20px 0;
+    padding: 0;
+    width: 245px;
+    height: 245px;
+    border-radius: 50%;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#s-back .clock .pointer-clock .number {
+    transform: rotate(calc(30deg * var(--n)));
+    position: absolute;
+    text-align: center;
+    inset: 5px;
+    font-size: 1.3rem;
+}
+
+#s-back .clock .pointer-clock .number b {
+    transform: rotate(calc(-30deg * var(--n)));
+    display: inline-block;
+}
+
+#s-back .clock .pointer-clock .center-dot {
+    margin: 0;
+    padding: 0;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: #111;
+    border-radius: 50%;
+}
+
+.hour-hand, .minute-hand, .second-hand{
+    --rotate: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%) rotate(calc(var(--rotate) * 1deg));
+}
+
+#s-back .clock .pointer-clock .hour-hand {
+    width: 5px;
+    height: 65px;
+    background-color: #986dff;
+}
+
+#s-back .clock .pointer-clock .minute-hand {
+    width: 5px;
+    height: 75px;
+    background-color: #111;
+}
+
+#s-back .clock .pointer-clock .second-hand {
+    width: 2px;
+    height: 85px;
+    background-color: #ffffff;
 }
