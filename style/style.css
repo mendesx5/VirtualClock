@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    appearance: none;
 }
 
 body {
@@ -30,6 +31,7 @@ body {
     left: 0;
     object-fit: cover;
     width: 100%;
+    height: 100vh;
 }
 
 header .grid-layout nav {
@@ -47,8 +49,15 @@ header .grid-layout nav {
 
 header .grid-layout nav .menu ul {
     display: flex;
+    align-items: center;
+    margin-top: -15px;
     list-style-type: none;
     gap: 10px;
+}
+
+.check-btn {
+    display: none;
+    margin-top: -15px;
 }
 
 #s-back .clock {
@@ -64,32 +73,17 @@ header .grid-layout nav .menu ul {
     flex-direction: column;
 }
 
-#s-back .clock button {
-    margin: 0 0;
-    padding: 5px;
-    font-size: 1.2rem;
-    width: 120px;
-    background: transparent;
-    border: 2px #986dff solid;
-    color: #111;
-    transition: all .5s ease;
+#s-back .clock h3 {
+    margin: 0 0 50px 0;
+    padding: 0;
+    color: #986dff;
+    font-size: 2rem;
+    text-shadow: 0 15px 30px #fff;
     font-weight: 800;
 }
 
-#s-back .clock button:hover {
-    background-color: #986dff;
-}
-
-#s-back .clock #btn-pont {
-    border-radius: 20px 0 0 20px;
-}
-
-#s-back .clock #btn-dig {
-    border-radius: 0 20px 20px 0;
-}
-
 #s-back .clock .pointer-clock {
-    border: 2px #986dff solid;
+    border: 5px #986dff solid;
     margin: 20px 0;
     padding: 0;
     width: 245px;
@@ -108,6 +102,8 @@ header .grid-layout nav .menu ul {
     text-align: center;
     inset: 5px;
     font-size: 1.3rem;
+    color: #fff;
+    text-shadow: 0 2px 8px #111;
 }
 
 #s-back .clock .pointer-clock .number b {
@@ -131,22 +127,141 @@ header .grid-layout nav .menu ul {
     left: 50%;
     bottom: 50%;
     transform: translate(-50%) rotate(calc(var(--rotate) * 1deg));
+    transform-origin: bottom;
+    border-radius:  30px 30px 0 0;
 }
 
 #s-back .clock .pointer-clock .hour-hand {
     width: 5px;
     height: 65px;
-    background-color: #986dff;
+    background: linear-gradient(#986dff, #111);
 }
 
 #s-back .clock .pointer-clock .minute-hand {
     width: 5px;
-    height: 75px;
-    background-color: #111;
+    height: 80px;
+    background: linear-gradient(#111, #986dff);
 }
 
 #s-back .clock .pointer-clock .second-hand {
     width: 2px;
-    height: 85px;
-    background-color: #ffffff;
+    height: 95px;
+    background: linear-gradient(#111, #986dff);
+}
+
+@media screen and (max-width:1280px) {
+    #s-back .clock {
+        width: 500px;
+        height: 550px;
+    }
+}
+
+@media screen and (max-width:998px) {
+    .check-btn {
+        display: block;
+    }
+
+    .lista {
+        padding: 30px 0 0 0;
+        position: fixed;
+        background-color: rgba(0, 0, 0, .8);
+        top: 76px;
+        height: 100vh;
+        display: block;
+        align-items: center;
+        justify-content: start;
+        width: 30%;
+        text-align: center;
+        right: -135%;
+        -webkit-transition: all 500ms;
+        transition: all 500ms;
+    }
+
+    .lista a li {
+        width: 40vh;
+        border: 2px #1f1f1f solid;
+        transition: all .5s ease;
+    }
+
+    .lista a li:hover {
+        border: 2px #986dff solid;
+    }
+
+    #check:checked ~ .lista {
+        right: 0;
+    }
+}
+
+@media screen and (max-width:767px) {
+    header .grid-layout nav {
+        padding: 5px 20px;
+    }
+    .lista {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lista a li svg {
+        width: 50px;
+        height: 50px;
+        margin: 10px 0;
+    }
+
+    #s-back .clock {
+        border: none;
+        backdrop-filter: none;
+    }
+
+    #s-back .clock h3 {
+        margin: 0;
+        padding: 0;
+        top: 130px;
+        color: #986dff;
+        font-size: 2rem;
+        text-shadow: 0 15px 30px #fff;
+        font-weight: 800;   
+        position: absolute;
+        z-index: 1;
+    }
+
+    #s-back .clock .pointer-clock {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    header .grid-layout nav {
+        margin: 0;
+        padding: 2px 10px;
+    }
+
+    #s-back .clock .pointer-clock {
+        margin-top: 100px;
+    }
+
+    #s-back .clock h3 {
+        margin: 0;
+        padding: 0;
+        top: 80px;
+        color: #986dff;
+        font-size: 1.7rem;
+        font-weight: 800;   
+        position: absolute;
+        z-index: 1;
+    }
+    .lista {
+        padding: 8px;
+    }
+
+    .lista a li {
+        width: 50vh;
+    }
+
+    .lista a li svg {
+        width: 32px;
+        height: 32px;
+        margin: 5px 0;
+    }
 }
