@@ -12,7 +12,7 @@ body {
     transition: background .2s linear;
 }
 
-#s-clock {
+#s-back {
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -46,4 +46,40 @@ header .grid-layout nav .menu ul {
     display: flex;
     list-style-type: none;
     gap: 10px;
+}
+
+#s-back .clock {
+    background: transparent;
+    backdrop-filter: blur(10px);
+    width: 500px;
+    height: 700px;
+    border: 2px #986dff solid;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#s-back .clock button {
+    margin: 10px 0;
+    padding: 5px;
+    font-size: 1.2rem;
+    width: 120px;
+    background: transparent;
+    border: 2px #986dff solid;
+    color: #fff;
+    transition: all .5s ease;
+}
+
+#s-back .clock button:hover {
+    background-color: #986dff;
+}
+
+#s-back .clock #btn-pont {
+    border-radius: 20px 0 0 20px;
+}
+
+#s-back .clock #btn-dig {
+    border-radius: 0 20px 20px 0;
 }
