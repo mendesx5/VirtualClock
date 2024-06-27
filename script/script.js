@@ -1,3 +1,4 @@
+//RELÓGIO DE PONTEIRO
 const secondHand = document.getElementById("second-hand");
 const minuteHand = document.getElementById("minute-hand");
 const hourHand = document.getElementById("hour-hand");
@@ -18,3 +19,27 @@ function rotateClockHand(element, rotation) {
 }
 
 setInterval(clockTick, 1000);
+
+
+//RELÓGIO DIGITAL
+const hor = document.getElementById('hor');
+const min = document.getElementById('min');
+const sec = document.getElementById('sec');
+
+const clockDigital = setInterval(function time () {
+    let dateToday = new Date();
+    let h = dateToday.getHours();
+    let m = dateToday.getMinutes();
+    let s = dateToday.getSeconds();
+
+    if (h < 10) {h =  "0" + h};
+    if (m < 10) {m =  "0" + m};
+    if (s < 10) {s =  "0" + s};
+
+    hor.textContent = h;
+    min.textContent = m;
+    sec.textContent = s;
+
+})
+
+//Botóes Para alternar entre os relógios

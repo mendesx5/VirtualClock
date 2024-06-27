@@ -78,6 +78,10 @@
 
         <div class="clock">
             <h3>Relógio Virtual</h3>
+            <div class="buttons">
+                <button id="pointer">Ponteiro</button>
+                <button id="digital">Digital</button>
+            </div>
             <div class="pointer-clock">
                 <div class="number" style="--n:1"><b>1</b></div>
                 <div class="number" style="--n:2"><b>2</b></div>
@@ -96,6 +100,20 @@
                 <div class="minute-hand" id="minute-hand"></div>
                 <div class="second-hand" id="second-hand"></div>
                 <div class="center-dot"></div>
+            </div>
+            
+            <div class="digital-clock">
+                <div>
+                    <span id="hor">00</span>
+                </div>
+                <span>:</span>
+                <div>
+                    <span id="min">00</span>
+                </div>
+                <span>:</span>
+                <div>
+                    <span id="sec">00</span>
+                </div>
             </div>
         </div>
     </section>
