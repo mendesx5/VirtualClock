@@ -14,6 +14,7 @@ body {
     background-color: #fff;
     width: 100%;
     transition: background .2s linear;
+    overflow: hidden;
 }
 
 #s-back {
@@ -25,7 +26,11 @@ body {
     justify-content: center;
 }
 
-#s-back video {
+#s-back #video-container {
+    overflow: hidden;
+}
+
+#s-back #video-container video {
     position: fixed;
     top: 0;
     left: 0;
