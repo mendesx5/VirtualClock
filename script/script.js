@@ -12,11 +12,11 @@ function clockTick () {
     rotateClockHand(secondHand, seconds);
     rotateClockHand(minuteHand, minutes);
     rotateClockHand(hourHand, hours);
-}
+};
 
 function rotateClockHand(element, rotation) {
     element.style.setProperty('--rotate', rotation * 360);
-}
+};
 
 setInterval(clockTick, 1000);
 
@@ -40,6 +40,36 @@ const clockDigital = setInterval(function time () {
     min.textContent = m;
     sec.textContent = s;
 
-})
+});
+
+//Mudar o Background de acordo com a hora (Dia/Noite)
+window.onload = function() {
+    const videoContainer = document.getElementById('video-container');
+    const date = new Date();
+    const hour = date.getHours();
+    let videoPath;
+
+    if (hour >= 6 && hour < 18) {
+        videoPath = '/image/day.mp4';
+    } else {
+        videoPath = '/image/nigth.mp4';
+    }
+
+    videoContainer.innerHTML = '';
+
+    const newVideo = document.createElement('video');
+    newVideo.autoplay = true;
+    newVideo.muted = true;
+    newVideo.loop = true;
+    newVideo.id = 'video-background';
+
+    const newSource = document.createElement('source');
+    newSource.src = videoPath;
+    newSource.type = 'video/mp4';
+
+    newVideo.appendChild(newSource);
+    videoContainer.appendChild(newVideo);
+};
+
 
 //Botóes Para alternar entre os relógios

@@ -30,13 +30,14 @@ body {
     overflow: hidden;
 }
 
-#s-back #video-container video {
+#s-back #video-container #video-background {
     position: fixed;
     top: 0;
     left: 0;
     object-fit: cover;
     width: 100%;
     height: 100vh;
+    z-index: -1;
 }
 
 header .grid-layout nav {
