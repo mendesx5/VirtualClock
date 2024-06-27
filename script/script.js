@@ -60,6 +60,7 @@ window.onload = function() {
     newVideo.autoplay = true;
     newVideo.muted = true;
     newVideo.loop = true;
+    newVideo.loading = "lazy"
     newVideo.id = 'video-background';
 
     const newSource = document.createElement('source');
