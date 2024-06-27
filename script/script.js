@@ -49,9 +49,9 @@ window.onload = function() {
     let videoPath;
 
     if (hour >= 6 && hour < 18) {
-        videoPath = '/image/day.mp4';
+        videoPath = 'image/day.mp4';
     } else {
-        videoPath = '/image/nigth.mp4';
+        videoPath = 'image/nigth.mp4';
     }
 
     videoContainer.innerHTML = '';
@@ -70,7 +70,7 @@ window.onload = function() {
     videoContainer.appendChild(newVideo);
 };
 
-//Botóes Para alternar entre os relógios
+//Botões Para alternar entre os relógios
 document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.getElementById('toggleButton');
     const divs = document.querySelectorAll('.clocks')
