@@ -37,7 +37,6 @@ body {
     object-fit: cover;
     width: 100%;
     height: 100vh;
-    z-index: -1;
 }
 
 header .grid-layout nav {
@@ -79,6 +78,27 @@ header .grid-layout nav .menu ul {
     flex-direction: column;
 }
 
+#s-back .clock .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    margin: 0 0 10px 0;
+    flex-direction: column;
+    position: fixed;
+}
+
+#s-back .clock .clocks {
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+#s-back .clock .clocks.active {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
 #s-back .clock h3 {
     margin: 0 0 50px 0;
     padding: 0;
@@ -91,7 +111,8 @@ header .grid-layout nav .menu ul {
 #s-back .clock .buttons button {
     background: transparent;
     border: 4px #986dff solid;
-    width: 150px;
+    border-radius: 30px;
+    width: 200px;
     padding: 2px;
     color: #fff;
     text-shadow: 0 2px 12px #111;
@@ -103,14 +124,6 @@ header .grid-layout nav .menu ul {
 
 #s-back .clock .buttons button:hover {
     background-color: #986dff;
-}
-
-#s-back .clock .buttons #pointer {
-    border-radius: 30px 0 0 30px;
-}
-
-#s-back .clock .buttons #digital {
-    border-radius: 0 30px 30px 0;
 }
 
 #s-back .clock .digital-clock {
@@ -126,7 +139,7 @@ header .grid-layout nav .menu ul {
     border-radius: 20px;
     background: transparent;
     backdrop-filter: blur(10px);
-    display: flex; /*display flex*/
+    display: none; /*display flex*/
     align-items: center;
     justify-content: center;
     gap: 30px;
@@ -152,7 +165,7 @@ header .grid-layout nav .menu ul {
 
 #s-back .clock .pointer-clock {
     border: 5px #986dff solid;
-    margin: 20px 0;
+    margin: 90px 0 0 0;
     padding: 0;
     width: 245px;
     height: 245px;
@@ -221,6 +234,13 @@ header .grid-layout nav .menu ul {
     #s-back .clock {
         width: 500px;
         height: 550px;
+    }
+}
+
+@media screen and (max-height:850px) {
+    #s-back .clock {
+        width: 500px;
+        height: 500px;
     }
 }
 

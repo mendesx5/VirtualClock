@@ -39,7 +39,6 @@ const clockDigital = setInterval(function time () {
     hor.textContent = h;
     min.textContent = m;
     sec.textContent = s;
-
 });
 
 //Mudar o Background de acordo com a hora (Dia/Noite)
@@ -71,5 +70,17 @@ window.onload = function() {
     videoContainer.appendChild(newVideo);
 };
 
-
 //Botóes Para alternar entre os relógios
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.getElementById('toggleButton');
+    const divs = document.querySelectorAll('.clocks')
+    let currentIndex = 0;
+
+    divs[currentIndex].classList.add('active');
+
+    buttons.addEventListener('click', () => {
+        divs[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % divs.length;
+        divs[currentIndex].classList.add('active');
+    })
+})

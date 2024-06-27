@@ -80,12 +80,13 @@
         </div>
 
         <div class="clock">
-            <h3>Relógio Virtual</h3>
+            <div class="container">
+                <h3>Relógio Virtual</h3>
             <div class="buttons">
-                <button id="pointer">Ponteiro</button>
-                <button id="digital">Digital</button>
+                <button class="pointer" id="toggleButton">Alternar</button>
             </div>
-            <div class="pointer-clock">
+            </div>
+            <div class="clocks pointer-clock" id="pointer-clock">
                 <div class="number" style="--n:1"><b>1</b></div>
                 <div class="number" style="--n:2"><b>2</b></div>
                 <div class="number" style="--n:3"><b>3</b></div>
@@ -105,7 +106,7 @@
                 <div class="center-dot"></div>
             </div>
             
-            <div class="digital-clock">
+            <div class="clocks digital-clock" id="digital-clock">
                 <div>
                     <span id="hor">00</span>
                 </div>
