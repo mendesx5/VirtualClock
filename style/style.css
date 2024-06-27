@@ -55,9 +55,20 @@ header .grid-layout nav {
 header .grid-layout nav .menu ul {
     display: flex;
     align-items: center;
-    margin-top: -15px;
+    margin-top: -25px;
     list-style-type: none;
     gap: 10px;
+}
+
+header .grid-layout nav .menu ul a li {
+    border: 2px #686868 solid;
+    padding: 5px 5px 0 5px;
+    border-radius: 50%;
+    transition: all .5s ease;
+} 
+
+header .grid-layout nav .menu ul a li:hover {
+    border: 2px #986dff solid;
 }
 
 .check-btn {
