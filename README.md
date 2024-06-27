@@ -1,8 +1,8 @@
 ## Relógio Virtual Responsivo
 
 <div>
-  <img src="image/clock-print1.png" width="350px">
-  <img src="image/clock-print5.png" width="350px">
+  <img src="image/clock-print1.png" width="400px">
+  <img src="image/clock-print5.png" width="400px">
 </div>
 
 <div>
