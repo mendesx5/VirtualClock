@@ -16,7 +16,7 @@
 ## 🔎 Acesse aqui: [DEPLOY](https://mendesx5.github.io/VirtualClock/)
 ## 📝 About:
 <p>
-  Este Relógio Virtual foi desenvolvido por mim(Gabriel Mendes), com o inuito de mostrar minhas habilidades. <br>
+  Este Relógio Virtual foi desenvolvido por mim (Gabriel Mendes), com o inuito de mostrar minhas habilidades. <br><br>
   No site, o relógio está em modelo de ponteiro opu digital, caso deseje alternar entre um ou outro, há um botão "Alternar", 
   para que seja trocado de um modelo para outro. O site foi projetado para ser responsivo, e atender as demandas de todo tipo 
   de usuário, podendo ser utilizado em Desktop ou Mobile.
