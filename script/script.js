@@ -18,3 +18,14 @@ function rotateClockHand(element, rotation) {
 }
 
 setInterval(clockTick, 1000);
+
+window.onload = function () {
+    const video = document.getElementById('background-video');
+    const hourVideo = new date().getHours();
+
+    if (hourVideo > 6 && hourVideo < 18) {
+        video.src = 'day.mp4'
+    } else {
+        video.src = 'nigth.mp4'
+    }
+}
